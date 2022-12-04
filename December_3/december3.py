@@ -11,20 +11,18 @@ def split_list_in_half(lst):
 
 solution1 = 0
 solution2 = 0
-counter = 0
 #Solution to part 1
-while counter < len(lines):
-    first_half_and_second_half = split_list_in_half(lines[counter])
+for line in lines:
+    first_half_and_second_half = split_list_in_half(line)
     counter2 = 0
     while counter2 < len(first_half_and_second_half[0]):
         if first_half_and_second_half[0][counter2] in first_half_and_second_half[1]:
             if (first_half_and_second_half[0][counter2]).islower():
-                solution1 += ord(lines[counter][counter2])-96
+                solution1 += ord(line[counter2])-96
             elif (first_half_and_second_half[0][counter2]).isupper():
-                solution1 += ord(lines[counter][counter2])-38
+                solution1 += ord(line[counter2])-38
             break
         counter2+=1
-    counter+=1
 
 #Solution to part 2
 counter = 0
