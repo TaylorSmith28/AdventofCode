@@ -23,5 +23,6 @@ for index in lines:
         elif elfs_total_calories > third:
             third = elfs_total_calories
         elfs_total_calories = 0
+        
 print(first)
 print(first + second + third)
