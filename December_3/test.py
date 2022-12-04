@@ -1,7 +1,3 @@
-"""
-File to solve the third day of adventofcode 2022
-"""
-
 with open('input.txt', encoding='utf-8') as f:
     lines = f.readlines()
 
@@ -26,7 +22,15 @@ while counter < len(lines):
         counter2+=1
     counter+=1
 
-#Solution to part 2
+print(solution1)
+
+
+
+
+
+
+#-------------------------------------------------------------------
+solution2 = 0
 counter = 0
 while counter < len(lines):
     counter2 = 0
@@ -34,11 +38,12 @@ while counter < len(lines):
         if (lines[counter][counter2] in lines[counter+1]) and (lines[counter][counter2] in lines[counter+2]):
             if (lines[counter][counter2]).islower():
                 solution2 += ord(lines[counter][counter2])-96
+                flag = True
+                break
             elif ((lines[counter][counter2]).isupper()):
                 solution2 += ord(lines[counter][counter2])-38
-            break
+                flag = True
+                break
         counter2+=1
     counter+=3
-
-print("Solution 1: " + str(solution1))
-print("Solution 2: " + str(solution2))
+print(solution2)
