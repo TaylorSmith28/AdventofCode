@@ -8,7 +8,6 @@ with open('input.txt', encoding='utf-8') as f:
 total = 0
 total2 = 0
 
-#Solution 1
 for line in lines:
     line1, line2 = line.split(',')
     line11, line12 = line1.split('-')
